@@ -23,11 +23,9 @@ function App() {
   const [sortBy, setSortBy] = useState('points');
 
   function getNumericStat(player, statKey) {
-    const foundStr =
-      player.statistics.find(
-        (str) => str.includes(statKey)
-      );
-    return foundStr ? +foundStr.replace(/\D/g, "") : 0;
+    const foundStr = player.statistics.find((str) => str.toLowerCase().includes(statKey.toLowerCase()));
+    const matchStr = foundStr ?.match(/[\d.]+/)?.[0];
+    return matchStr ? +matchStr : 0;
   }
 
   const sortedPlayers = [...filteredPlayers].sort((a, b) => (
