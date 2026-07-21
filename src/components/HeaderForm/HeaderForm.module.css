@@ -1,0 +1,39 @@
+.form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.searchInput,
+.sortSelect {
+    font-family: -apple-system, sans-serif;
+    font-size: 0.85rem;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    color: #1d1d1f;
+}
+
+.searchInput {
+    flex: 1.7;
+}
+
+.sortSelect {
+    flex: 1;
+    cursor: pointer;
+}
+
+.searchInput:focus,
+.sortSelect:focus {
+    border-color: #0071e3;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.18);
+}
